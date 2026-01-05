@@ -340,12 +340,7 @@
 }
 
 /* portofolio */
-.wrapper-porto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  align-items: stretch; /* KUNCI: Memaksa semua anak sama tinggi */
-}
+
 .product_box {
   width: 100%;
   height: 100%;
