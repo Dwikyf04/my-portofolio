@@ -1,0 +1,792 @@
+.social-media-icons a {
+  font-size: 2rem;
+}
+
+.light-button div.bt {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.light-button div.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #674242;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+.light-button div.bt .button-holder svg {
+  height: 50px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+
+/* tombol */
+.light-button div.bt .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button div.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button div.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button div.bt:hover .button-holder svg {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button div.bt:hover .button-holder {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button div.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 1) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Container Utama per Item */
+.light-button-testing {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px; /* Ruang untuk titik lampu di atas */
+}
+
+/* Wrapper Tombol & Cahaya */
+.light-button-testing .bt-testing {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Batasi lebar agar tidak gepeng */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  /* Hapus height: 200px agar tinggi mengikuti isi konten */
+}
+
+/* --- KOTAK KARTU (CARD) --- */
+.light-button-testing .bt-testing .button-holder-testing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Rata kiri biar rapi */
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 220px; /* Tinggi minimal */
+
+  background-color: rgb(10, 10, 10); /* Hitam pekat */
+  border-radius: 15px;
+  color: #a1a1aa;
+  transition: all 0.3s ease;
+
+  /* Outline default (mati) */
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: 0px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+
+  /* Hapus margin-left: 20px yang bikin miring */
+  margin: 0;
+  z-index: 10; /* Agar di atas cahaya */
+}
+
+/* Efek Hover pada Kartu */
+.light-button-testing .bt-testing:hover .button-holder-testing {
+  outline: 2px solid rgba(34, 211, 238, 1); /* Warna Cyan */
+  outline-offset: 4px; /* Jarak outline dari kartu */
+  transform: translateY(-5px); /* Naik dikit pas di hover */
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+/* --- EFEK CAHAYA (LAMP) --- */
+.light-button-testing .bt-testing .light-holder-testing {
+  position: absolute;
+  top: -20px; /* Naik ke atas kartu */
+  width: 100%;
+  height: 300px; /* Panjang sorotan cahaya */
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* PENTING: Agar cahaya tidak menghalangi klik tombol */
+  z-index: 1;
+}
+
+/* Titik Lampu (Dot) */
+.light-button-testing .bt-testing .light-holder-testing .dot-testing {
+  width: 8px;
+  height: 8px;
+  background-color: #333; /* Warna mati */
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+/* Sorotan Cahaya (Cone) */
+.light-button-testing .bt-testing .light-holder-testing .light-testing {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  clip-path: polygon(50% 2%, 0% 100%, 100% 100%); /* Bentuk Segitiga */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover State untuk Cahaya */
+.light-button-testing .bt-testing:hover .light-holder-testing .dot-testing {
+  background-color: #22d3ee; /* Dot jadi Cyan */
+  box-shadow: 0 0 10px #22d3ee;
+}
+
+.light-button-testing .bt-testing:hover .light-holder-testing .light-testing {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 1) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* btn */
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0077b5;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+.Btn:hover .svgContainer {
+  border: 1px solid rgba(216, 216, 216, 0.466);
+  background-color: rgba(190, 190, 190, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.BG-github {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG-github {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+.Btn:hover .svgContainer {
+  background-color: rgba(135, 132, 132, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.BG-instagram {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG-instagram {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+.myButton {
+  background-color: #06b6d4;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.myButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.8), 0 0 40px rgba(6, 182, 212, 0.4);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: solid rgba(6, 182, 212, 0.3);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-glass:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: #22d3ee;
+  color: #22d3ee;
+  transform: translateY(-2px);
+}
+
+/* portofolio */
+.wrapper-porto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch; /* KUNCI: Memaksa semua anak sama tinggi */
+}
+.product_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #1e293b;
+  transition: all 0.3s ease;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.product_box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.description {
+  margin-top: 10px;
+  padding: 20px;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.description h2 {
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.description h3 {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-bottom: 13px;
+  font-family: monospace;
+}
+.description p {
+  /* line-height: 12px; */
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.product_box:hover {
+  border-color: #22d3ee;
+  padding: 10px;
+  transform: translateY(-2px);
+  box-shadow: rgba(215, 215, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.product_box:hover img {
+  transform: scale(1.05);
+}
+
+.button-porto {
+  margin-top: auto;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: fit-content;
+  /* height: 50px; */
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  display: inline-block;
+}
+.button-porto:hover {
+  transform: translateY(-2px);
+  color: #06b6d4;
+}
+
+/* certif */
+.wrapper-certif {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  align-items: stretch; /* KUNCI: Memaksa semua anak sama tinggi */
+}
+.container-certif {
+  position: relative;
+  font-family: sans-serif;
+  height: 100%;
+  /* display: flex;
+  align-items: center; */
+}
+.container-certif .box-certif {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  padding: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.074); */
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.8rem;
+  transition: all ease 0.3s;
+}
+.box-certif h2 {
+  color: white;
+}
+.box-certif span {
+  color: #d1d5db;
+}
+.box-certif p {
+  margin-bottom: 5px;
+  color: #d1d5db;
+}
+
+.button-certif {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 12px 30px;
+  margin-left: auto;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+.button-certif:hover {
+  transform: translateY(-2px);
+  color: #06b6d4;
+}
+
+.container-certif:before,
+.container-certif::after {
+  background-color: #37c6e94c;
+  position: absolute;
+  pointer-events: none;
+}
+
+.container-certif::before {
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 5px;
+  top: 30%;
+  right: 7%;
+}
+
+.container-certif::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+}
+.container-certif .box-certif div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container-certif .box-certif:hover {
+  box-shadow: 0px 0px 20px 1px #37a8d83f;
+  border: 1px solid rgba(55, 97, 225, 0.454);
+}
+
+/* certif end */
+
+/* experience */
+
+.wrapper-experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+  gap: 20px;
+  align-items: stretch; /* KUNCI: Memaksa semua anak sama tinggi */
+}
+
+.container-experience {
+  position: relative;
+  font-family: sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container-experience::before,
+.container-experience::after {
+  background-color: #133eb34c;
+  position: absolute;
+  pointer-events: none;
+}
+
+.container-experience::before {
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 5px;
+  top: 30%;
+  right: 7%;
+}
+
+.container-experience::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+}
+.container-experience .box-experience {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+}
+
+.container-experience .box-experience div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container-experience .box-experience:hover {
+  box-shadow: 0px 0px 20px 1px #37a8d83f;
+  border: 1px solid rgba(55, 97, 225, 0.454);
+}
+
+.container-experience p {
+  margin-bottom: 5px;
+}
+
+.button-experience {
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 40px;
+  padding: 12px 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+.button-experience:hover {
+  transform: translateY(-2px);
+  color: #06b6d4;
+}
+/* experience end */
+
+/* about */
+
+.wrapper-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+.container-about {
+  position: relative;
+  font-family: sans-serif;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.container-about .box-about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.8rem;
+  transition: all ease 0.3s;
+}
+
+.container-about::before,
+.container-about::after {
+  background-color: #37c6e94c;
+  position: absolute;
+  pointer-events: none;
+}
+
+.container-about::before {
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 5px;
+  top: 30%;
+  right: 7%;
+}
+
+.container-about::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+}
+.container-about .box-about div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container-about .box-about:hover {
+  box-shadow: 0px 0px 20px 1px #37a8d83f;
+  border: 1px solid rgba(55, 97, 225, 0.454);
+}
+
+/* about end */
+
+/* testing  */
+
+/* .light-button-testing div.bt-testing {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.light-button-testing div.bt-testing .button-holder-testing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  color: #b19a9add;
+  font-weight: 600;
+  transition: 300ms;
+  outline: #000000 2px solid;
+  outline-offset: 20;
+  margin-left: 20px;
+}
+
+.light-button-testing div.bt-testing .button-holder-testing h2 {
+  height: 50px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+.button-holder-testing p {
+  color: rgba(255, 255, 255, 0.315);
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em; */
+/* } */
+/* tombol */
+/* .light-button-testing div.bt-testing .light-holder-testing {
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* warna tombol */
+/* .light-button-testing div.bt-testing .light-holder-testing .dot-testing {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  z-index: 2;
+} */
+
+/* cahaya lampu */
+/* .light-button-testing div.bt-testing .light-holder-testing .light-testing {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button-testing div.bt-testing:hover .button-holder-testing h2 {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button-testing div.bt-testing:hover .button-holder-testing {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
+} */
+
+/* .light-button-testing
+  div.bt-testing:hover
+  .light-holder-testing
+  .light-testing {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 1) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+} */
+@media (max-width: 768px) {
+  .wrapper-certif {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+    gap: 20px;
+  }
+  .wrapper-about {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+    gap: 10px;
+  }
+  .wrapper-experience {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+  }
+  .product_box {
+    width: 100%; /* Di HP, lebar portofolio full */
+  }
+}
+@media (max-width: 480px) {
+  .wrapper-certif {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+    gap: 15px;
+  }
+  .wrapper-about {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+    gap: 7px;
+  }
+  .wrapper-experience {
+    grid-template-columns: 1fr; /* Di HP jadi 1 kolom */
+  }
+}
