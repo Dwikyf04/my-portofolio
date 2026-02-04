@@ -189,21 +189,19 @@ export default function Home() {
               </span>
               <br />
             </div>
-            <div className="mb-8">
+            <div className="Btn-poin">
               <a
                 className="px-8 py-3 bg-accent text-dark font-bold rounded-full hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(34,211,238,0.3)]
-              "
+                "
                 href="https://drive.google.com/file/d/1nBoRDFM5ZHPZskQUnf1Xyto-vZ5xeQ4T/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Download CV
               </a>
-            </div>
-            <div className="mb-8">
+
               <a
-                className="px-8 py-3 bg-accent text-dark font-bold rounded-full hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(34,211,238,0.3)]
-              "
+                className="px-8 py-3 bg-accent text-dark font-bold rounded-full hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(34,211,238,0.3)]"
                 href="https://drive.google.com/drive/folders/1UueyK8Nks9GeS-1bqWhtVbiewtnW-I8U?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
