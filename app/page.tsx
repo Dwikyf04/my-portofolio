@@ -200,6 +200,17 @@ export default function Home() {
                 Download CV
               </a>
             </div>
+            <div className="mb-8">
+              <a
+                className="px-8 py-3 bg-accent text-dark font-bold rounded-full hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(34,211,238,0.3)]
+              "
+                href="https://drive.google.com/drive/folders/1UueyK8Nks9GeS-1bqWhtVbiewtnW-I8U?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Portofolio
+              </a>
+            </div>
 
             <div className="w-full sm:mt-4">
               <h2 className="text-xl font-bold text-accent">
