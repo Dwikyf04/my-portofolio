@@ -29,7 +29,7 @@ export default function Experience() {
                 </p>
               </div>
             </div>
-            <div className="button-experience">
+            {/* <div className="button-experience">
               <a
                 href="https://drive.google.com/file/d/1ufJn83mvv34r57yCO5A6UKAmHhp7PZJk/view"
                 target="_blank"
@@ -37,7 +37,7 @@ export default function Experience() {
               >
                 <span>Certifications</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="container-experience">
