@@ -213,7 +213,7 @@ export default function Portofolio() {
           </div>
         </div>
         <div className="product_box">
-          <img src="/image/portofolio9.png" alt="Portofolio 1" />
+          <img src="/image/portofolio8.png" alt="Portofolio 1" />
           <div className="description">
             <div>
               <h2>Desain Web Portofolio CV - Figma </h2>
@@ -235,7 +235,7 @@ export default function Portofolio() {
           </div>
         </div>
         <div className="product_box">
-          <img src="/image/portofolio8.png" alt="Portofolio 1" />
+          <img src="/image/portofolio9.png" alt="Portofolio 1" />
           <div className="description">
             <div>
               <h2>Portfofolio Forecasting-1 </h2>
