@@ -213,7 +213,7 @@ export default function Portofolio() {
           </div>
         </div>
         <div className="product_box">
-          <img src="/image/portofolio8.png" alt="Portofolio 1" />
+          <img src="/image/portofolio9.png" alt="Portofolio 1" />
           <div className="description">
             <div>
               <h2>Desain Web Portofolio CV - Figma </h2>
@@ -226,6 +226,33 @@ export default function Portofolio() {
             </div>
             <a
               href="https://www.figma.com/design/4Zp6s68pln5A8usw2BYpV0/project-web-cv?node-id=0-1&t=3SnmQXdhIQycbWwh-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-porto"
+            >
+              <span>Portofolio</span>
+            </a>
+          </div>
+        </div>
+        <div className="product_box">
+          <img src="/image/portofolio8.png" alt="Portofolio 1" />
+          <div className="description">
+            <div>
+              <h2>Portfofolio Forecasting-1 </h2>
+              <h3>Portofolio Project</h3>
+              <p>
+                develop a web-based portfolio forecasting application using
+                python and streamlit
+              </p>
+              <p>
+                Implemented time series forecasting model prophet to predict
+                future trends and performance of a financial portfolio,
+                providing users with actionable insights for informed
+                decision-making.
+              </p>
+            </div>
+            <a
+              href="https://project-forecasting-1-ku.streamlit.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="button-porto"
