@@ -261,6 +261,36 @@ export default function Portofolio() {
             </a>
           </div>
         </div>
+        <div className="product_box">
+          <img src="/image/portofolio10.png" alt="Portofolio 1" />
+          <div className="description">
+            <div>
+              <h2>Portfofolio Arsip OCR </h2>
+              <h3>Portofolio Project</h3>
+              <p>
+                A full-stack AI web application for quickly digitizing physical
+                documents into searchable text data. Built using FastAPI, React
+                (Vite & Tailwind CSS), and Tesseract OCR.
+              </p>
+              <p>
+                Automatic Text Extraction (OCR): Converts document images
+                (JPG/PNG) into digital text, Quick Search (Search Engine): Finds
+                old documents by simply typing keywords within the image,
+                Archive Preview: Displays the original document image along with
+                the extracted text, Data Management: Delete irrelevant archives
+                directly from the web interface.
+              </p>
+            </div>
+            <a
+              href="https://dimple-melioristic-defectively.ngrok-free.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-porto"
+            >
+              <span>Portofolio</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
