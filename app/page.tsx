@@ -251,7 +251,7 @@ export default function Home() {
 
                 <a
                   className="Btn"
-                  href="https://github.com/Dwikyf04"
+                  href="https://www.instagram.com/dwikyfernandaaa/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
