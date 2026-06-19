@@ -87,7 +87,7 @@ export default function Portofolio() {
             </div>
 
             <a
-              href="https://portofolio-rekomen-library.streamlit.app/"
+              href="https://appmapsreviewlibrary-cv.streamlit.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="button-porto"
